@@ -67,7 +67,8 @@ input::-webkit-inner-spin-button {
 
 .entries-edit-info-modal {
     border-radius: 8px;
-    max-width: 90vw;
+    width: 90vw;
+    max-width: 768px;
     padding: 24px 16px;
     position: absolute;
     top: 50%;

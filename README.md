@@ -22,3 +22,6 @@ quasar build
 
 ### Customize the configuration
 See [Configuring quasar.config.js](https://v2.quasar.dev/quasar-cli-vite/quasar-config-js).
+
+### Disclaimer
+This project is 100% based on the Danny Connel Quasar and Vue 3 course
