@@ -1,1 +1,133 @@
-// app global css in SCSS form
+.q-drawer {
+    .q-item {
+        opacity: .6;
+        &.q-router-link--exact-active {
+            opacity: 1;
+        }
+    }
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    margin-left: 10px;
+}
+
+.modal-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 1;
+
+    &-enter-active,
+    &-leave-active {
+        transition: opacity .5s ease-in-out;
+    }
+
+    &-enter-from,
+    &-leave-to {
+        opacity: 0;
+    }
+}
+
+.body--light {
+    .modal-overlay {
+        background-color: rgba(0 0 0 / .6);
+    }
+    .entries-edit-info-modal {
+        background-color: #fff;
+
+        &__input {
+            border-bottom: 1px solid;
+        }
+    }
+}
+
+.body--dark {
+    .bg-primary,
+    .q-layout__section--marginal {
+        background-color: $primary-dark !important;
+    }
+    
+    .q-drawer {
+        border: none;
+    }
+
+    .modal-overlay {
+        background-color: rgba(150 150 150 / .3);
+    }
+    .entries-edit-info-modal {
+        background-color: #131313;
+
+        &__input {
+            background-color: #1e1e1e;
+            border-bottom: 1px solid #fff;
+            color: #fff;
+        }
+    }
+}
+
+.entries-edit-info-modal {
+    border-radius: 8px;
+    max-width: 90vw;
+    padding: 24px 16px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -80%);
+    text-align: end;
+    width: 100%;
+    z-index: 2;
+
+    &__box {
+        &:not(:last-child) {
+            margin-bottom: 16px;
+        }
+    }
+
+    &__input {
+        border: none;
+        padding-block: 4px;
+        padding-inline: 12px;
+        width: 100%;
+    }
+
+    &__btn {
+        border: none;
+        border-radius: 4px;
+        color: #fff;
+        padding: 4px 14px;
+        &:not(:first-child) {
+            margin-left: 16px;
+        }
+
+        &--edit {
+            background-color: color-mix(in srgb, $primary 100%, white 50%);
+        }
+
+        &--cancel {
+            background-color: $negative;
+        }
+    }
+
+    &.modal-bottom {
+        &-enter-active,
+        &-leave-active {
+            transition: all .5s ease-in-out;
+        }
+    
+        &-enter-from,
+        &-leave-to {
+            transform: translate(-50%, 100%);
+            opacity: 0;
+        }
+    }
+}
+
+.running-balance {
+    bottom: -18px;
+    right: -5px;
+}
+
+.sortable-ghost {
+    opacity: .4;
+    filter: grayscale(.9);
+}

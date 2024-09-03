@@ -97,12 +97,12 @@ module.exports = configure(function (/* ctx */) {
       // directives: [],
 
       // Quasar plugins
-      plugins: []
+      plugins: ['Dialog', 'Notify', 'LocalStorage']
     },
 
     // animations: 'all', // --- includes all animations
     // https://v2.quasar.dev/options/animations
-    animations: [],
+    animations: ['jackInTheBox', 'fadeInUp', 'fadeOutDown'],
 
     // https://v2.quasar.dev/quasar-cli-vite/quasar-config-js#sourcefiles
     // sourceFiles: {
